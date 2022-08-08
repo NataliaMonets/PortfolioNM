@@ -1,0 +1,117 @@
+@import '../../shared/style/fonts.scss';
+
+.page-content {
+    width: 100%;
+    background-color: rgb(131, 6, 6);
+    color: beige;
+    text-align: center;
+    padding: 50px 0;
+    font-family: 'PoppinsRegular';
+}
+
+h1 {
+    font-family: 'PoppinsSemiBold';
+}
+
+h3 {
+    line-height: 26px;
+    margin-top: 10px;
+    font-family: 'PoppinsLight';
+
+    img {
+        width: 30px;
+    }
+}
+
+.s1 {
+    width: 80%;
+    margin: 50px auto 30px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+
+    a {
+        width: 30%;
+        text-decoration: none;
+        color: beige;
+
+        img {
+            margin-bottom: 10px;
+        }
+    }
+}
+
+.s2 {
+    a {
+        text-decoration: none;
+        color: beige;
+    }
+}
+
+input {
+    width: 20%;
+    margin: 20px auto;
+    background-color: beige;
+}
+
+button {
+    width: 10%;
+    margin-bottom: 10px;
+}
+
+h4 {
+    font-family: 'PoppinsLight';
+}
+
+
+@media (max-width: 800px) {
+    h4 {
+        font-size: 18px;
+    }
+
+    p {
+        font-size: 12px;
+    }
+
+    h3 {
+        font-size: 18px;
+    }
+
+    input {
+        width: 30%;
+    }
+
+    button {
+        width: 10%;
+    }
+}
+
+@media (max-width: 510px) {
+    h4 {
+        font-size: 16px;
+    }
+
+    p {
+       display: none;
+    }
+
+    h3 {
+        font-size: 18px;
+    }
+
+    .s1 {
+        margin-bottom: 0;
+
+        a {
+            margin-bottom: 25px;
+        }
+    }
+
+    input {
+        width: 60%;
+    }
+
+    button {
+        width: 30%;
+    }
+}

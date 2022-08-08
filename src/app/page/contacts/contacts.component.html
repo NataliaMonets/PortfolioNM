@@ -1,0 +1,33 @@
+<div class="page-content" id="contacts">
+    <h1>Contacts</h1>
+    <h3>Feel free to write me! <img src="../../../assets/images/emoji-16.svg"></h3>
+    <section class="s1">
+        <a href="https://t.me/Natalia_Monets" target="_blank">
+            <img src="../../../assets/images/telegram.svg" [ngStyle]="{'width': '40px', 'height': '40px'}">
+            <p>@Natalia_Monets</p>
+        </a>
+        <a href="https://www.linkedin.com/in/natalia-monets-534baa198/" target="_blank">
+            <img src="../../../assets/images/linkedin.svg" [ngStyle]="{'width': '40px', 'height': '40px'}">
+            <p>Natalia Monets</p>
+        </a>
+        <a href="https://www.facebook.com/nata.monets/" target="_blank">
+            <img src="../../../assets/images/facebook-logo-2019.svg" [ngStyle]="{'width': '40px', 'height': '40px'}">
+            <p>Nata Monets</p>
+        </a>
+        <a href="https://github.com/NataliaMonets" target="_blank">
+            <img src="../../../assets/images/github.svg" [ngStyle]="{'width': '40px', 'height': '40px'}">
+            <p>@NataliaMonets</p>
+        </a>
+        <a href="mailto: nataliia.monets@gmail.com" target="_blank">
+            <img src="../../../assets/images/gmail.svg" [ngStyle]="{'width': '40px', 'height': '40px'}">
+            <p>nataliia.monets@gmail.com</p>
+        </a>
+    </section>
+    <section class="s2">
+        <h4>Enter "I have a job for you" to see my phone number:</h4>
+        <input type="text" class="form-control" [(ngModel)]="check" name="check" (click)="retInput()">
+        <button class="btn btn-outline-light" (click)="showNumber()">GO</button><br>
+        <a href="tel:+380664527084" *ngIf="status">+380664527084</a>
+        <h5 *ngIf="statusMes">Try again)</h5>
+    </section>
+</div>

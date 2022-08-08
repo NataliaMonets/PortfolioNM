@@ -1,0 +1,77 @@
+<div class="page-content" id="skills">
+  <h1 id="skillsH1">Skills</h1>
+  <section>
+    <div class="skills-n">
+      <button type="button" class="btn btn-outline-light skills-options" (click)="switchToHard()">
+        <h3>Hard Skills</h3>
+      </button>
+      <button type="button" class="btn btn-outline-light skills-options" (click)="switchToSoft()" >
+        <h3>Soft Skills</h3>
+      </button>
+    </div>
+    <div class="skills">
+      <div class="hard-skills" *ngIf="statusH">
+        <li>
+          <img src="../../../assets/images/html.svg" [ngStyle]="{'width': '40px', 'height': '55px', 'margin-bottom': '8px'}">
+          <span>HTML5</span>
+        </li>
+        <li>
+          <img src="../../../assets/images/css.svg" [ngStyle]="{'width': '60px', 'height': '60px'}">
+          <span>CSS3</span>
+        </li>
+        <li>
+          <img src="../../../assets/images/bootstrap.svg" [ngStyle]="{'width': '60px', 'height': '60px'}">
+          <span>Bootstrap</span>
+        </li>
+        <li>
+          <img src="../../../assets/images/figma.svg" [ngStyle]="{'width': '60px', 'height': '60px'}">
+          <span>Figma</span>
+        </li>
+        <li>
+          <img src="../../../assets/images/javascript.svg" [ngStyle]="{'width': '45px', 'height': '60px'}">
+          <span>Java Script</span>
+        </li>
+        <li>
+          <img src="../../../assets/images/angular.svg" [ngStyle]="{'width': '60px', 'height': '60px'}">
+          <span>Angular 2+</span>
+        </li>
+        <li>
+          <img src="../../../assets/images/git.svg" [ngStyle]="{'width': '60px', 'height': '60px'}">
+          <span>Git</span>
+        </li>
+        <li>
+          <img src="../../../assets/images/github.svg" [ngStyle]="{'width': '60px', 'height': '60px'}">
+          <span>GitHub</span>
+        </li>
+        <li>
+          <img src="../../../assets/images/node-js.svg" [ngStyle]="{'width': '60px', 'height': '60px'}">
+          <span>NodeJS</span>
+        </li>
+      </div>
+      <div class="soft-skills" *ngIf="statusS">
+        <li>
+          <h3>Good team player</h3>
+        </li>
+        <li class="li-right">
+          <h3>Easily adapt</h3>
+        </li>
+        <li>
+          <h3>Communicative and reliable</h3>
+        </li>
+        <li class="li-right">
+          <h3>Enthusiastic</h3>
+        </li>
+        <li>
+          <h3>Organized</h3>
+        </li>
+        <li class="li-right">
+          <h3>Fast learner</h3>
+        </li>
+        <li>
+          <h3>Ready to improve</h3>
+        </li>
+      </div>
+    </div>
+  </section>
+  <img src="../../../assets/images/skills.png" class="skills-png">
+</div>

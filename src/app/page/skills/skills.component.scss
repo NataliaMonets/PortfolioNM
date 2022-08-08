@@ -1,0 +1,147 @@
+@import '../../shared/style/fonts.scss';
+
+.page-content {
+    width: 100%;
+    background-color: rgb(131, 6, 6);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 45vh;
+    color: white;
+    font-family: 'PoppinsRegular';
+}
+
+h1 {
+    font-family: 'PoppinsSemiBold';
+    margin-bottom: 30px;
+    padding-top: 10px;
+}
+
+li {
+    list-style-type: none;
+}
+
+section {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.skills-n {
+    display: flex;
+    width: 40%;
+    justify-content: space-between;
+    margin-bottom: 30px;
+}
+
+.skills {
+    width: 80%;
+    border-radius: 3%;
+    height: 100%vh;
+    margin: auto;
+}
+
+.soft-skills {
+    width: 60%;
+    margin: auto;
+
+    li {
+        min-height: 70px;
+        border-bottom: 1px solid beige;
+        text-align: center;
+        padding-top: 20px;
+        color: beige;
+    }
+}
+
+.hard-skills {
+    width: 100%;
+    font-size: 26px;
+    margin: 30px auto;
+    display: grid;
+    grid-template-columns: 33.3% 33.3% 33.3%;
+    grid-template-rows: 150px 150px 150px;
+    text-align: center;
+
+    li {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        color: beige;
+    }
+
+    img {
+        margin: 0 auto;
+    }
+}
+
+.skills-png {
+    height: 36%;
+}
+
+.skills-options {
+    padding-top: 15px;
+}
+
+
+
+@media (max-width: 830px) {
+    .page-content {
+        padding-top: 25vh;
+    }
+
+    .skills-options {
+        width: 130px;
+        height: 80px;
+        font-size: 18px;
+        padding-top: 10px;
+    }
+
+    .skills-n {
+        width: 100%;
+        justify-content: space-around;
+    }
+
+    .skills-png {
+        height: 350px;
+    }
+}
+
+@media (max-width: 530px) {
+    .page-content {
+        padding-top: 10vh;
+    }
+
+    .skills-options {
+        width: 100px;
+        height: 80px;
+        font-size: 14px;
+    }
+
+    .skills-png {
+        height: 300px;
+    }
+
+    .skills {
+        h3 {
+            font-size: 20px;
+        }
+    
+        span {
+            font-size: 18px;
+        }
+    }
+}
+
+@media (max-width: 400px) {
+    .skills-n {
+        width: 100%;
+        justify-content: space-around;
+    }
+
+    .skills-png {
+        height: 150px;
+    }
+}
