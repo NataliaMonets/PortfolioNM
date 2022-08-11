@@ -7,21 +7,11 @@
       <button type="button" class="btn btn-outline-light" (click)="showInfo()">About me</button>
     </div>
     <div class="right-container">
-      <a href="https://t.me/Natalia_Monets" target="_blank">
-        <img src="assets/images/telegram1.svg" [ngStyle]="{'width': '30px', 'height': '30px'}">
-      </a>
-      <a href="https://www.linkedin.com/in/natalia-monets-534baa198/" target="_blank">
-        <img src="assets/images/social-media-54.svg" [ngStyle]="{'width': '30px', 'height': '30px'}">
-      </a>
-      <a href="https://www.facebook.com/nata.monets/" target="_blank">
-        <img src="assets/images/social-media-54 (1).svg" [ngStyle]="{'width': '30px', 'height': '30px'}">
-      </a>
-      <a href="https://github.com/NataliaMonets" target="_blank">
-        <img src="assets/images/social-media-54 (2).svg" [ngStyle]="{'width': '30px', 'height': '30px'}">
-      </a>
-      <a href="mailto: nataliia.monets@gmail.com" target="_blank">
-        <img src="assets/images/gmail1.svg" [ngStyle]="{'width': '30px', 'height': '30px'}">
-      </a>
+      <div *ngFor="let contact of contactsArr; index as i">
+        <a [href]="contact.href" target="_blank">
+          <img [src]="contact.icon" class="contacts">
+        </a>
+      </div>
     </div>
   </div>
   <img src="assets/images/abstract-shape.png" class="shape">
@@ -30,9 +20,13 @@
   <img src="assets/images/abstract-shape.png" class="shape3">
   <img src="assets/images/abstract-shape1.png" class="shape4">
   <img src="assets/images/abstract-shape2.png" class="shape5">
-  <div class="about"  *ngIf="showAbout">
-    <img src="assets/images/close.svg" [ngStyle]="{'width': '30px', 'height': '30px'}" (click)="showInfo()">
-    <p>Hi there! I'm Natalia Monets, a 21-year-old passionate Front-end developer who is ready to master my skills and learn new ones to become a universal worker. Web development allows me to apply a combination of my creative and technological skills. I get indescribable satisfaction from solving difficult tasks and helping people. Looking forward to the opportunity to work in a deft team to implement all my skills and absorb new knowledge. Seeking for a full-time job.</p>
+  <div class="about" *ngIf="showAbout">
+    <img src="assets/images/close.svg" class="contacts" (click)="showInfo()">
+    <p>Hi there! I'm Natalia Monets, a 21-year-old passionate Front-end developer who is ready to master my skills and
+      learn new ones to become a universal worker. Web development allows me to apply a combination of my creative and
+      technological skills. I get indescribable satisfaction from solving difficult tasks and helping people. Looking
+      forward to the opportunity to work in a deft team to implement all my skills and absorb new knowledge. Seeking for
+      a full-time job.</p>
     <a href="assets/images/CV.pdf" download="Natalia_Monets_CV">Download my CV</a>
   </div>
 </div>
