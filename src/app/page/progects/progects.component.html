@@ -1,15 +1,10 @@
 <div class="page-content" id="progects">
-    <h1>Progects</h1>
+    <h1>{{title}}</h1>
     <section>
-        <div class="fProgect">
-            <img src="assets/images/logo-dark.svg">
-            <h2>La-piec (copy)</h2>
-            <a href="https://github.com/NataliaMonets/origami.git" target="_blank"><button type="button" class="btn btn-outline-danger">GO</button></a>
-        </div>
-        <div class="sProgect">
-            <img src="assets/images/f2f7469.png">
-            <h2>Origami (copy)</h2>
-            <a href="https://github.com/NataliaMonets/la-piec.git" target="_blank"><button type="button" class="btn btn-outline-danger">GO</button></a>
+        <div *ngFor="let progect of progects" [class]="progect.class">
+            <img [src]="progect.img">
+            <h2>{{progect.name}}</h2>
+            <a [href]="progect.link"><button type="button" class="btn btn-outline-danger">GO</button></a>
         </div>
     </section>
 </div>

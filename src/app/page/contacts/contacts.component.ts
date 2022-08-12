@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { CONTACTS, TEXT } from 'src/app/constans/contacts.constans';
 
 @Component({
   selector: 'app-contacts',
@@ -6,11 +7,14 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./contacts.component.scss']
 })
 export class ContactsComponent implements OnInit {
-  public status = false;
-  public statusMes = false;
-  public check!: string;
+  status = false;
+  statusMes = false;
+  check!: string;
+  contacts = CONTACTS;
+  text = TEXT;
 
-  constructor() { }
+  constructor(
+  ) { }
 
   ngOnInit(): void {
   }
@@ -25,7 +29,7 @@ export class ContactsComponent implements OnInit {
     this.check = '';
   }
 
-  retInput(): void {
+  hideNumber(): void {
     this.status = false;
     this.statusMes = false;
   }

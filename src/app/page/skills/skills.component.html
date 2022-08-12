@@ -1,77 +1,27 @@
 <div class="page-content" id="skills">
-  <h1 id="skillsH1">Skills</h1>
+  <h1>{{title[0]}}</h1>
   <section>
     <div class="skills-n">
-      <button type="button" class="btn btn-outline-light skills-options" (click)="switchToHard()">
-        <h3>Hard Skills</h3>
+      <button type="button" class="btn btn-outline-light skills-options" (click)="switch(true)" autofocus>
+        <h3>{{title[1]}}</h3>
       </button>
-      <button type="button" class="btn btn-outline-light skills-options" (click)="switchToSoft()" >
-        <h3>Soft Skills</h3>
+      <button type="button" class="btn btn-outline-light skills-options" (click)="switch(false)">
+        <h3>{{title[2]}}</h3>
       </button>
     </div>
     <div class="skills">
-      <div class="hard-skills" *ngIf="statusH">
-        <li>
-          <img src="assets/images/html.svg" [ngStyle]="{'width': '40px', 'height': '55px', 'margin-bottom': '8px'}">
-          <span>HTML5</span>
-        </li>
-        <li>
-          <img src="assets/images/css.svg" class="contacts">
-          <span>CSS3</span>
-        </li>
-        <li>
-          <img src="assets/images/bootstrap.svg" class="contacts">
-          <span>Bootstrap</span>
-        </li>
-        <li>
-          <img src="assets/images/figma.svg" class="contacts">
-          <span>Figma</span>
-        </li>
-        <li>
-          <img src="assets/images/javascript.svg" [ngStyle]="{'width': '45px', 'height': '60px'}">
-          <span>Java Script</span>
-        </li>
-        <li>
-          <img src="assets/images/angular.svg" class="contacts">
-          <span>Angular 2+</span>
-        </li>
-        <li>
-          <img src="assets/images/git.svg" class="contacts">
-          <span>Git</span>
-        </li>
-        <li>
-          <img src="assets/images/github.svg" class="contacts">
-          <span>GitHub</span>
-        </li>
-        <li>
-          <img src="assets/images/node-js.svg" class="contacts">
-          <span>NodeJS</span>
+      <div class="hard-skills" *ngIf="skillsStatus">
+        <li *ngFor="let item of hard">
+          <img [src]="item.img" [class]="item.class">
+          <span>{{item.name}}</span>
         </li>
       </div>
-      <div class="soft-skills" *ngIf="statusS">
-        <li>
-          <h3>Good team player</h3>
-        </li>
-        <li class="li-right">
-          <h3>Easily adapt</h3>
-        </li>
-        <li>
-          <h3>Communicative and reliable</h3>
-        </li>
-        <li class="li-right">
-          <h3>Enthusiastic</h3>
-        </li>
-        <li>
-          <h3>Organized</h3>
-        </li>
-        <li class="li-right">
-          <h3>Fast learner</h3>
-        </li>
-        <li>
-          <h3>Ready to improve</h3>
+      <div class="soft-skills" *ngIf="!skillsStatus">
+        <li *ngFor="let item of soft; index as i">
+          <h3>{{item}}</h3>
         </li>
       </div>
     </div>
   </section>
-  <img src="assets/images/skills.png" class="skills-png">
+  <img [src]="skillsImg" class="skills-png">
 </div>

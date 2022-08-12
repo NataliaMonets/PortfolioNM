@@ -1,21 +1,14 @@
 <header>
-  <a href="#home"><img src="assets/images/alphabet.png"></a>
+  <a href="#home"><img [src]="images.logo"></a>
   <div class="nav" (click)="showNav()">
     <img src="assets/images/menu.png" class="nav-icon">
   </div>
-  <ul class="header_nav" [ngClass]="{'show': !show}">
-    <li class="nav-item">
-      <a href="#education" class="nav-link">Education</a>
-    </li>
-    <li class="nav-item">
-      <a href="#skillsH1" class="nav-link">Skills</a>
-    </li>
-    <li class="nav-item">
-      <a href="#progects" class="nav-link">Progects</a>
-    </li>
-    <li class="nav-item">
-      <a href="#contacts" class="nav-link">Contacts</a>
-    </li>
-  </ul>
-  <div class="buttonUp"><a href="#home"><img src="assets/images/arrows-51 (1).svg"></a></div>
+  <nav>
+    <ul class="header_nav" [ngClass]="{'show': !show}">
+      <li class="nav-item" *ngFor="let item of navArr">
+        <a [href]="item.link" class="nav-link">{{item.title}}</a>
+      </li>
+    </ul>
+  </nav>
+  <div class="buttonUp"><a href="#home"><img [src]="images.arrowUp"></a></div>
 </header>

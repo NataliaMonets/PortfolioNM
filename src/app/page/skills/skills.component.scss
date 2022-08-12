@@ -6,18 +6,31 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding-top: 45vh;
+    padding-top: 20px;
     color: white;
-    font-family: 'PoppinsRegular';
+    font-family: 'Poppins';
+    font-weight: 400;
 }
 
-.contacts {
+.skills-item {
     width: 60px;
     height: 60px;
 }
 
+.html-skill {
+    width: 40px;
+    height: 55px;
+    margin-bottom: 8px;
+}
+
+.js-skill {
+    width: 46px;
+    height: 60px;
+    margin-bottom: 8px;
+}
+
 h1 {
-    font-family: 'PoppinsSemiBold';
+    font-weight: 600;
     margin-bottom: 30px;
     padding-top: 10px;
 }
@@ -43,15 +56,16 @@ section {
 .skills {
     width: 80%;
     border-radius: 3%;
-    height: 100%vh;
+    height: 100%;
     margin: auto;
 }
 
 .soft-skills {
-    width: 60%;
+    width: 40%;
     margin: auto;
 
     li {
+        width: 100%;
         min-height: 70px;
         border-bottom: 1px solid beige;
         text-align: center;
@@ -83,18 +97,16 @@ section {
 }
 
 .skills-png {
-    height: 36%;
+    width: 27%;
 }
 
 .skills-options {
     padding-top: 15px;
 }
 
-
-
 @media (max-width: 830px) {
-    .page-content {
-        padding-top: 25vh;
+    .soft-skills {
+        width: 50%;
     }
 
     .skills-options {
@@ -110,13 +122,13 @@ section {
     }
 
     .skills-png {
-        height: 350px;
+        width: 35%;
     }
 }
 
 @media (max-width: 530px) {
-    .page-content {
-        padding-top: 10vh;
+    .soft-skills {
+        width: 60%;
     }
 
     .skills-options {
@@ -126,7 +138,7 @@ section {
     }
 
     .skills-png {
-        height: 300px;
+        width: 50%;
     }
 
     .skills {
@@ -141,12 +153,25 @@ section {
 }
 
 @media (max-width: 400px) {
+    .soft-skills {
+        width: 80%;
+    }
+
     .skills-n {
         width: 100%;
         justify-content: space-around;
     }
+}
 
-    .skills-png {
-        height: 150px;
+@media (max-width: 300px) {
+
+    .hard-skills {
+        span {
+            display: none;
+        }
+    }
+    .skills-n {
+        width: 100%;
+        justify-content: space-around;
     }
 }

@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { BehaviorSubject } from 'rxjs';
+import { NAV, IMAGES } from 'src/app/constans/header.constans';
 
 @Component({
   selector: 'app-header',
@@ -7,8 +7,9 @@ import { BehaviorSubject } from 'rxjs';
   styleUrls: ['./header.component.scss']
 })
 export class HeaderComponent implements OnInit {
-
-  public show = false;
+  images = IMAGES;
+  navArr = NAV;
+  show = false;
 
   constructor() { }
 
@@ -17,6 +18,5 @@ export class HeaderComponent implements OnInit {
 
   showNav(): void {
     this.show = !this.show;
-    console.log('hey');
   }
 }

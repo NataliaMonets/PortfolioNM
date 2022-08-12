@@ -1,5 +1,5 @@
 <div class="page-content" id="home">
-  <div class="main-container" *ngIf="!showAbout">
+  <section class="main-container" *ngIf="!showAbout">
     <div class="left-container">
       <img src="assets/images/photo_2019-10-08_19-58-37.jpg" class="main_photo">
       <h1>Monets Natalia-Sophia</h1>
@@ -7,26 +7,22 @@
       <button type="button" class="btn btn-outline-light" (click)="showInfo()">About me</button>
     </div>
     <div class="right-container">
-      <div *ngFor="let contact of contactsArr; index as i">
+      <ng-container *ngFor="let contact of contacts; index as i">
         <a [href]="contact.href" target="_blank">
           <img [src]="contact.icon" class="contacts">
         </a>
-      </div>
+      </ng-container>
     </div>
-  </div>
-  <img src="assets/images/abstract-shape.png" class="shape">
-  <img src="assets/images/abstract-shape1.png" class="shape1">
-  <img src="assets/images/abstract-shape2.png" class="shape2">
-  <img src="assets/images/abstract-shape.png" class="shape3">
-  <img src="assets/images/abstract-shape1.png" class="shape4">
-  <img src="assets/images/abstract-shape2.png" class="shape5">
+  </section>
+  <img [src]="shapes.shape_img" class="shape0">
+  <img [src]="shapes.shape_img2" class="shape1">
+  <img [src]="shapes.shape_img3" class="shape2">
+  <img [src]="shapes.shape_img" class="shape3">
+  <img [src]="shapes.shape_img2" class="shape4">
+  <img [src]="shapes.shape_img3" class="shape5">
   <div class="about" *ngIf="showAbout">
     <img src="assets/images/close.svg" class="contacts" (click)="showInfo()">
-    <p>Hi there! I'm Natalia Monets, a 21-year-old passionate Front-end developer who is ready to master my skills and
-      learn new ones to become a universal worker. Web development allows me to apply a combination of my creative and
-      technological skills. I get indescribable satisfaction from solving difficult tasks and helping people. Looking
-      forward to the opportunity to work in a deft team to implement all my skills and absorb new knowledge. Seeking for
-      a full-time job.</p>
+    <p>{{about}}</p>
     <a href="assets/images/CV.pdf" download="Natalia_Monets_CV">Download my CV</a>
   </div>
 </div>

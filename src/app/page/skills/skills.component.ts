@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { TITLES, SOFTSKILLS, HARDSKILLS, SKILLSIMG } from 'src/app/constans/skills.constans';
 
 @Component({
   selector: 'app-skills',
@@ -6,22 +7,17 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./skills.component.scss']
 })
 export class SkillsComponent implements OnInit {
-  public statusH = true;
-  public statusS = false;
-  public q = document.getElementById('skillsH1')?.offsetTop;
-
+  soft = SOFTSKILLS;
+  hard = HARDSKILLS;
+  title = TITLES;
+  skillsImg = SKILLSIMG;
+  skillsStatus = true;
   constructor() { }
 
   ngOnInit(): void {
   }
 
-  switchToSoft(): void {
-    this.statusS = true;
-    this.statusH = false;
-  }
-
-  switchToHard(): void {
-    this.statusH = true;
-    this.statusS = false;
+  switch(status: boolean): void {
+    this.skillsStatus = status;
   }
 }

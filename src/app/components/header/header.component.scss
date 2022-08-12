@@ -6,19 +6,25 @@ header {
     display: flex;
     justify-content: space-between;
     z-index: 200;
-    font-family: 'PoppinsRegular';
+    font-family: 'Poppins';
+    font-weight: 400;
     border-bottom: 1px solid rgb(105, 8, 8);
+    padding: 0 20px;
+}
+
+nav {
+    width: 40%;
 }
 
 img {
-    margin: 10px 20px;
+    margin: 10px 0;
     height: 40px;
     width: 40px;
 }
 
 .header_nav {
-    margin: 20px 20px;
-    width: 40%;
+    margin: 20px 0;
+    width: 100%;
     display: flex;
     justify-content: space-between;
 }
@@ -72,15 +78,18 @@ a {
         position: relative;
     }
 
-    .header_nav {
-        flex-direction: column;
-        align-items: flex-end;
+    nav {
         position: absolute;
         height: 55vh;
         top: 48px;
         right: 0px;
-        margin: 0;
-        padding: 40px 10px;
+    }
+
+    .header_nav {
+        flex-direction: column;
+        align-items: flex-end;
+        height: 100%;
+        padding-right: 10px;
         background-color: transparent;
         z-index: 300;
         text-align: end;
@@ -147,6 +156,10 @@ a {
             width: 45px;
             height: 45px;
         }
+    }
+
+    nav {
+        width: 100%;
     }
 
     .header_nav {

@@ -6,7 +6,8 @@
     background-color: rgb(131, 6, 6);
     color: white;
     position: relative;
-    font-family: 'PoppinsRegular';
+    font-family: 'Poppins';
+    font-weight: 400;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -29,7 +30,7 @@
     animation: 0.5s ease-out 0s 1 slideIn;
 
     h1 {
-        font-family: 'PoppinsMedium';
+        font-weight: 500;
         font-size: 52px;
     }
 }
@@ -89,7 +90,7 @@
     border-radius: 50%;
 }
 
-.shape {
+.shape0 {
     position: absolute;
     top: 5vh;
     left: 5%;
@@ -139,36 +140,15 @@
 
 .page-content:hover {
 
-    .shape {
-        height: 200px;
-        transform: rotate(360deg);
-    }
-
-    .shape1 {
-        height: 200px;
-        transform: rotate(-360deg);
-    }
-
-    .shape2 {
-        height: 200px;
-        transform: rotate(360deg);
-    }
-
-    .shape3 {
-        height: 200px;
-        transform: rotate(360deg);
-    }
-
-    .shape4 {
-        height: 200px;
-        transform: rotate(360deg);
-    }
-
+    .shape0,
+    .shape1,
+    .shape2,
+    .shape3,
+    .shape4,
     .shape5 {
         height: 200px;
         transform: rotate(360deg);
     }
-
 }
 
 .right-container {
@@ -185,7 +165,7 @@
     }
 }
 
-@media (max-width: 1030px){
+@media (max-width: 1030px) {
     .right-container {
         display: none;
     }
@@ -195,27 +175,27 @@
         justify-content: center;
     }
 
-    .shape {
+    .shape0 {
         position: absolute;
         top: 2vh;
         left: 10%;
     }
-    
+
     .shape1 {
         top: 35vh;
         left: 50%;
     }
-    
+
     .shape2 {
         top: 5vh;
         right: 18%;
     }
-    
+
     .shape3 {
         top: 79vh;
         right: 5%;
     }
-    
+
     .shape4 {
         top: 75vh;
         left: 40%;
@@ -235,7 +215,7 @@
     .left-container {
         margin-left: 0;
         width: 100%;
-    
+
         h1 {
             font-size: 42px;
         }
@@ -275,26 +255,12 @@
 }
 
 @media (max-width: 650px) {
-    .shape {
-        display: none;
-    }
-    
-    .shape1 {
-        display: none;
-    }
-    
-    .shape2 {
-        display: none;
-    }
-    
-    .shape3 {
-        display: none;
-    }
-    
-    .shape4 {
-        display: none;
-    }
-    
+
+    .shape0,
+    .shape1,
+    .shape2,
+    .shape3,
+    .shape4,
     .shape5 {
         display: none;
     }
