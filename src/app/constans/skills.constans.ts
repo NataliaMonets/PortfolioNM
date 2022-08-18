@@ -38,13 +38,13 @@ export const HARDSKILLS = [
         class: 'skills-item'
     },
     {
-        img: 'assets/images/github.svg',
-        name: 'GitHub',
+        img: 'assets/images/sass.svg',
+        name: 'SCSS/SASS',
         class: 'skills-item'
     },
     {
-        img: 'assets/images/node-js.svg',
-        name: 'NodeJS',
+        img: 'assets/images/typescript.svg',
+        name: 'TypeScript',
         class: 'skills-item'
     },
 ];
