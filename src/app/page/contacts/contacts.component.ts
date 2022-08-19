@@ -20,7 +20,7 @@ export class ContactsComponent implements OnInit {
   }
 
   showNumber(): void {
-    if (this.check.toLowerCase() != 'i have a job for you') {
+    if (this.check.toLowerCase().trim() != 'i have a job for you') {
       this.statusMes = !this.statusMes;
     }
     else {
